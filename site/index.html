@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Next Gen Submissions</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">RevenueCat Shipaton 2026 · Judge's console</p>
+      <h1>Next Gen Award submissions</h1>
+      <p class="lede" id="lede"></p>
+      <p class="notice" id="serve" hidden>Videos won't play when this page is opened straight from disk. Run <code>python3 -m http.server 8000</code> inside the <code>site</code> folder and open <code>http://localhost:8000</code>.</p>
+      <details class="about">
+        <summary>About the Next Gen Award</summary>
+        <div class="about-body">
+          <p><strong>Who:</strong> active students (high school, university, bootcamp, academic programs) with a qualifying student email. Ages 13+; minors need parent or guardian consent.</p>
+          <p><strong>What to submit:</strong> a demo video (under 2 minutes, on YouTube or Vimeo) and a <em>public, open-source</em> code repo with a license that shows in the repo's About section. No store release or paid developer account needed.</p>
+          <p><strong>Judging criteria:</strong></p>
+          <ul>
+            <li>Is the idea clear, useful, interesting or original? Does it solve a real problem?</li>
+            <li>Meaningful progress toward a working app, with core functionality clear from the video and repo</li>
+            <li>Thoughtful use of RevenueCat (subscriptions, IAP, web purchases, ads…)</li>
+            <li>Thoughtful technical choices, product thinking, and care in how it's built and presented</li>
+          </ul>
+          <p><strong>Prizes:</strong> 1st $20,000 + Shippy trophy + Times Square billboard + 9to5Mac/9to5Google spotlight + App Growth Annual invite · 2nd $10,000 · 3rd $5,000</p>
+          <p><strong>Timeline:</strong> submissions closed Sep 30, 2026 · judging Oct 1–13 · winners announced Oct 21 · Times Square Demo Day Oct 22</p>
+        </div>
+      </details>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="wrap controls-row">
+      <input id="q" type="search" placeholder="Search title, team, tech, description…" aria-label="Search submissions">
+      <select id="filter" aria-label="Filter">
+        <option value="all">All Next Gen entries</option>
+        <option value="try">GitHub in "Try it out"</option>
+        <option value="desc">GitHub in description only</option>
+        <option value="nostore">No store link</option>
+        <option value="student">Mentions student / Next Gen</option>
+        <option value="rc">RevenueCat found in repo</option>
+        <option value="shortlist">Judge's shortlist</option>
+      </select>
+      <select id="sort" aria-label="Sort">
+        <option value="n">Submission order</option>
+        <option value="likes">Most likes</option>
+        <option value="title">A–Z</option>
+        <option value="shortlist">Shortlist rank</option>
+      </select>
+      <span id="count" class="count"></span>
+    </div>
+  </div>
+
+  <main class="wrap" id="list"></main>
+  <p class="wrap more"><button id="more" type="button">Show more</button></p>
+
+  <footer class="wrap foot">Data is from the Devpost project gallery only. Open any card's Devpost link to see the original submission.</footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
